@@ -16,23 +16,23 @@ class InfoModel {
 class Data {
   Data({
     this.id,
-    this.name,
-    this.year,
-    this.color,
-    this.pantone_value,
+    this.email,
+    this.first_name,
+    this.lastname,
+    this.avatar,
   });
 
   final String? id;
-  final String? name;
-  final String? year;
-  final String? color;
-  final String? pantone_value;
+  final String? email;
+  final String? first_name;
+  final String? lastname;
+  final String? avatar;
 
   factory Data.fromJson(Map<String, dynamic> json) => Data(
         id: json["id"],
-        name: json["name"],
-        year: json["year"],
-        color: json["color"],
-        pantone_value: json["pantone_value"],
+        email: json["email"],
+        first_name: json["first_name"],
+        lastname: json["lastname"],
+        avatar: json["avatar"],
       );
 }
