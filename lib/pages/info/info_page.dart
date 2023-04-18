@@ -13,7 +13,7 @@ class InfoPage extends StatefulWidget {
 }
 
 class _InfoPageState extends State<InfoPage> {
-  Future<InfoModel> process = InfoService(NetworkSource.dio()).getInfo();
+  Future<List<InfoModel>> process = InfoService(NetworkSource.dio()).getInfo();
 
   @override
   Widget build(BuildContext context) {

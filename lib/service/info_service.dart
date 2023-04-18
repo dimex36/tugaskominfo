@@ -9,13 +9,13 @@ class InfoService {
 
   InfoService(this.dio);
 
-  Future<InfoModel> getInfo() async {
+Future<List<InfoModel>> getInfo() async {
     return await Wrapper<InfoModel>().wrap(
       () async {
         final response = await dio.get(info);
-        final result = InfoModel.fromJson(response.data);
+        final result = (response.data as List).map((e) => InfoModel.fromJson(e)).toList();
         return result;
       },
     );
-  }
+}
 }
